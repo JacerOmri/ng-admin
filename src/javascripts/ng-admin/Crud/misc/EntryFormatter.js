@@ -79,7 +79,7 @@ export default class EntryFormatter {
                 return function (entry) {
                     return {
                         name: label,
-                        value: entry.values[field.name()].map((obj => obj[field.targetFields()[0].name()]))
+                        value: entry.values[field.name()].map((obj => obj[field.targetFields()[0].name()])).sort()
                     };
                 };
             case 'referenced_list':
